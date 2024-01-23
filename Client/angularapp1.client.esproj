@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.128-alpha">
+  <PropertyGroup>
+    <StartupCommand>npm start</StartupCommand>
+    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <PublishAssetsDirectory>$(MSBuildProjectDirectory)\dist\angularapp1.client\</PublishAssetsDirectory>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\app\Helper\" />
+    <Folder Include="src\app\Models\" />
+    <Folder Include="src\app\Guards\" />
+    <Folder Include="src\app\interceptors\" />
+    <Folder Include="src\app\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptConfiguration Remove=".vscode\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".vscode\**" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties tsconfig_1app_1json__JsonSchema="https://json.schemastore.org/tsdrc.json" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
